@@ -1,0 +1,434 @@
+body {
+    background-image: url("photos/Hockeyfield.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+#top-logo {
+    opacity: 0.6;
+    float: left;
+    width: 10%;
+    padding: 0;
+}
+
+
+#top-logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+#Pakaaa {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    margin: auto;
+
+}
+#Pakaaa img:hover{
+    opacity: 0.7;
+}
+
+#menu {
+    float: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+#menu li {
+    margin-left: 50px;
+    margin-top: 15px;
+    display: inline-block;
+    padding: 8px;
+
+
+}
+
+#menu a {
+    display: inline-block;
+    border-radius: 25px;
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 3px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 15px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;}
+
+#menu a:hover{
+    text-decoration: none;
+    opacity:0.4;
+}
+#frontphoto {
+    height: 50%;
+    margin: inherit;
+    width: 40%;
+    margin-left: 30%;
+}
+#buttomfront {
+    width: 50%;
+    height: 15%;
+    margin-left: 26%;
+
+}
+#Stories {
+    width: 40%;
+    height: 60%;
+
+    position: fixed;
+    left: 30%;
+      top: 15%;
+    margin: 50px auto;
+    opacity: 0.9;
+    border-left: 15px solid #3EC8AC;
+    border-right: 15px solid #4E90A4;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-position: 0 0, 0 100%;
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 20px;
+    -moz-background-size: 100% 20px;
+    background-size: 100% 20px;
+    background-image: -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -webkit-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+    background-image: -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -moz-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+    background-image: -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%), -o-linear-gradient(left, #3EC8AC 0%, #4E90A4 100%);
+    background-image: linear-gradient(to right, #3EC8AC 0%, #4E90A4 100%), linear-gradient(to right, #3EC8AC 0%, #4E90A4 100%);
+}
+
+#cal {
+    width: 40%;
+    background-color: white;
+    padding: 15px;
+    opacity: 0.9;
+    margin-left: 30%;
+    border-radius: 25px;
+}
+
+.flexgrid-wrapper {
+    display: flex;
+    max-width: 1024px;
+    margin: auto;
+
+    /*align-items: center;
+    justify-content: center;*/
+}
+.flexgrid {
+    flex: 1;
+    border-radius: 25px 0px 0px 25px;
+}
+
+
+#about {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: black;
+    flex: 0 0 600px;
+
+}
+#alftafoto {
+    width: auto;
+    max-height: 400px;
+    border-radius: 0px 25px 25px 0px;
+}
+
+.contact-table {
+    font-family: "Comic Sans MS";
+    margin: auto;
+    width: 350px;
+}
+#bumper {
+
+}
+
+
+/*FROM BELLOW TO SLIDESHOW*/
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    border-radius: 25px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    /*cursor: pointer;*/
+    position: absolute;
+    top: 3%;
+    width: auto;
+    height: 100vh;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.playersdiv {
+    width: 700px;
+    margin: auto;
+    height: auto;
+}
+
+.fotot {
+    height: 100%;
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+.newsdiv{
+    text-align: center;
+}
+.newsdiv img {
+    border-radius: 25px;
+}
+html { height: 100% }
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+.login {
+    background: #000000;
+    border: 1px solid #42464b;
+    border-radius: 6px;
+    height: 257px;
+    margin: 20px auto 0;
+    width: 298px;
+}
+.login h1 {
+    background-image: linear-gradient(top, #f1f3f3, #d4dae0);
+    border-bottom: 1px solid #a6abaf;
+    border-radius: 6px 6px 0 0;
+    box-sizing: border-box;
+    color: #727678;
+    display: block;
+    height: 43px;
+    font: 600 14px/1 'Open Sans', sans-serif;
+    padding-top: 14px;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.2), 0 1px 0 #fff;
+}
+input[type="password"], input[type="text"] {
+    background: url('http://i.minus.com/ibhqW9Buanohx2.png') center left no-repeat, linear-gradient(top, #d6d7d7, #dee0e0);
+    border: 1px solid #a1a3a3;
+    border-radius: 4px;
+    box-shadow: 0 1px #fff;
+    box-sizing: border-box;
+    color: #696969;
+    height: 39px;
+    margin: 31px 0 0 29px;
+    padding-left: 37px;
+    transition: box-shadow 0.3s;
+    width: 240px;
+}
+input[type="password"]:focus, input[type="text"]:focus {
+    box-shadow: 0 0 4px 1px rgba(55, 166, 155, 0.3);
+    outline: 0;
+}
+.show-password {
+    display: block;
+    height: 16px;
+    margin: 26px 0 0 28px;
+    width: 87px;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+    height: 16px;
+    opacity: 0;
+    position: relative;
+    width: 64px;
+}
+input[type="checkbox"]:checked {
+    left: 29px;
+    width: 58px;
+}
+.toggle {
+    background: url(http://i.minus.com/ibitS19pe8PVX6.png) no-repeat;
+    display: block;
+    height: 16px;
+    margin-top: -20px;
+    width: 87px;
+    z-index: -1;
+}
+input[type="checkbox"]:checked + .toggle { background-position: 0 -16px }
+.forgot {
+    color: #7f7f7f;
+    display: inline-block;
+    float: right;
+    font: 12px/1 sans-serif;
+    left: -19px;
+    position: relative;
+    text-decoration: none;
+    top: 5px;
+    transition: color .4s;
+}
+.forgot:hover { color: #3b3b3b }
+input[type="submit"] {
+    width:240px;
+    height:35px;
+    display:block;
+    font-family:Arial, "Helvetica", sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    text-align:center;
+    text-shadow:1px 1px 0px #37a69b;
+    padding-top:6px;
+    margin: 29px 0 0 29px;
+    position:relative;
+    cursor:pointer;
+    border: none;
+    background-color: #37a69b;
+    background-image: linear-gradient(top,#3db0a6,#3111);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius:5px;
+    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #497a78, 0px 10px 5px #999;
+}
+
+.shadow {
+    background: #000;
+    border-radius: 12px 12px 4px 4px;
+    box-shadow: 0 0 20px 10px #000;
+    height: 12px;
+    margin: 30px auto;
+    opacity: 0.2;
+    width: 270px;
+}
+
+
+input[type="submit"]:active {
+    top:3px;
+    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d, 0px 5px 3px #999;
+}

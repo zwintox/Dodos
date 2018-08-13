@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="css.css" rel="stylesheet">
+    <title>Profile page</title>
+</head>
+<body>
+<div class="top-menu clearfix">
+    <div id="top-logo">
+        <a th:href=@{index}>
+            <img src="photos/top-logo-MD.png" alt="övre högra logo">
+        </a>
+    </div>
+    <ul id="menu">
+        <li><a th:href="@{players}">Team</a></li>
+        <li><a th:href="@{news}">News</a></li>
+        <li><a th:href="@{calendar}">Calendar</a></li>
+        <li><a th:href="@{pakaaa}">Pakaaa</a></li>
+        <li><a th:href="@{photos}">Photo Gallery</a></li>
+        <li><a th:href="@{contactinformation}">Contact</a></li>
+        <li><a th:href="@{about}">About us</a></li>
+        <li><a th:href="@{login}">Log in</a></li>
+    </ul>
+</div>
+<h1>Welcome home</h1>
+<form action="logout" method="get">
+    <input type="submit" name="logoutbutton" value="Logout">
+</form>
+<h2>Create a new user</h2>
+<form action="/home" method="post">
+    <input type="text" name="username" placeholder="Enter username">
+    <input type ="text" name="firstname" placeholder="Enter firstname">
+    <input type ="text" name="lastname" placeholder="Enter lastname">
+    <input type="password" name="password" placeholder="Enter password">
+    <input type="text" name="email" placeholder="Enter email">
+    <input type="submit" value="Create new member">
+</form>
+<hr>
+<h2>Create stories</h2>
+<form action="/createstory" method="post">
+    <input type="text" name="headline" placeholder="Headline"><br>
+    <input type="text" name="imageurl" placeholder="ImageURL"><br>
+    <textarea name="storytext" placeholder="Storytext" rows="10" cols="50"></textarea>
+    <input type="submit" value="Create new story">
+</form>
+
+<hr>
+<h2>Post new photo</h2>
+<form action="/addnewphoto" method="post">
+    <input type="text" name="title" placeholder="title"><br>
+    <input type="text" name="url" placeholder="ImageURL"><br>
+    <input type="submit" value="Create new photo">
+</form>
+<hr>
+
+<h2>Edit information</h2>
+
+
+<hr>
+
+<div class="membersedit" th:each="member : ${members}">
+    <form action="/changemembersinfo" method="post">
+    <div> Firstname: <input type="text" name="firstname" placeholder="Firstname" th:value="${member.firstname}"></div>
+    <div> Lastname: <input type="text" name="lastname" placeholder="Lastname" th:value="${member.lastname}"></div>
+        <div> Username: <input type="text" name="username" placeholder="Username" th:value="${member.username}"></div>
+
+        <div> Password: <input type="password" name="password" th:value="${member.password}"></div>
+    <div> Email: <input type="text" name="email" placeholder="Email" th:value="${member.email}"></div>
+        <input type="submit" value="Save">
+    </form>
+    <hr>
+
+</div>
+
+</body>
+</html>
+

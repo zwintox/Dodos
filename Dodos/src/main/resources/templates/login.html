@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+<div class="top-menu clearfix">
+    <div id="top-logo">
+        <a th:href=@{index}>
+            <img src="photos/top-logo-MD.png" alt="övre högra logo">
+        </a>
+    </div>
+    <ul id="menu">
+        <li><a th:href="@{players}">Team</a></li>
+        <li><a th:href="@{news}">News</a></li>
+        <li><a th:href="@{calendar}">Calendar</a></li>
+        <li><a th:href="@{pakaaa}">Pakaaa</a></li>
+        <li><a th:href="@{photos}">Photo Gallery</a></li>
+        <li><a th:href="@{contactinformation}">Contact</a></li>
+        <li><a th:href="@{about}">About us</a></li>
+        <li><a th:href="@{login}">Log in</a></li>
+    </ul>
+</div>
+
+<div class="login">
+    <form action = "/login" method="post">
+    <input type="text" name="username" placeholder="Username" id="username">
+    <input type="password" name="password" placeholder="password" id="password">
+    <a href="#" class="forgot">Forgot password? Contact admin.</a>
+    <input type="submit" value="Login">
+    </form>
+</div>
+<div class="shadow"></div>
+
+</body>
+</html>
